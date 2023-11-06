@@ -15,27 +15,14 @@ $final = mysqli_query($conn, "SELECT * FROM cv_data ORDER BY nama ASC")
     <title>PHP | connect</title>
 </head>
 <body>
-    <h2>Data Pasien Klinik Sehat</h2>
-    <a class="btn btn-outline-dark" href="tambah.php">Create Data</a>
-
-    <table class="table table-dark table-striped">
-        <tr>
-            <th>Nama</th>
-            <th>Alamat</th>
-            <th>Action</th>
-        </tr>
-        <?php
+    <h2>Curicullum Vitae</h2>
+    <div>
+    <?php
         while ($data = mysqli_fetch_array($final)) {
-            echo "<tr>";
-            echo "<td>" . $data['Nama'] .  "</td>";
-            echo "<td>" . $data['Alamat'] ."</td>";
-            echo "<td>
-                    <a class='btn btn-outline-danger' href='hapus.php?antrian=$data[antrian]'>Hapus</a> 
-                    <a class='btn btn-outline-warning' href='ubah.php?antrian=$data[antrian]'>Update</a> 
-                    </td>";
-            echo "</tr>";
+            echo "<img src='$data[foto_path]'/>";
+            echo "<h1>".$data['nama']."</h1>";
         }
     ?>
-    </table>
+    </div>
 </body>
 </html>
