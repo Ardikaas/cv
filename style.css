@@ -9,28 +9,38 @@ html{
 
 body{
   margin: 0;
+  background-color: #FBFACD;
 }
 
 header{
-  background-color: rgb(76, 26, 215);
-  padding: 25px;
+  background-color: #7F669D;
+  padding: 15px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-items: left;
+  justify-content: right;
 }
 
 header a{
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 10px;
-  background-color: rgb(211, 124, 37);
-  color: white;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  margin-right: 20px;
+  background-color: #FBFACD;
+  color: #DEBACE;
   text-decoration: none;
+  border: 1px solid;
+  transition: 0.2s;
+}
+
+header a:hover{
+  background-color: #BA94D1;
+  color: #FBFACD;
+  border: 1px solid #FBFACD;
 }
 
 .container{
+  padding-top: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -41,6 +51,26 @@ header a{
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+}
+
+.profile h1{
+  margin: 0;
+}
+
+.profile h4{
+  margin: 0;
+  font-weight: 500;
+}
+
+.profile a{
+  text-decoration: none;
+  color: #1e1722;
+  font-weight: 500;
+}
+
+.profile a:hover{
+  text-decoration: underline;
 }
 
 .profile img{
@@ -50,22 +80,165 @@ header a{
   justify-content: center;
 }
 
-.ttl{
+.card-detail{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  background-color: #BA94D1;
+  padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+
+.card-detail h1{
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1px;
+}
+
+.card-detail h4{
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.login-con{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-card{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #DEBACE;
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid #BA94D1;
+}
+
+.login-card h2{
+  margin: 0;
+  padding-bottom: 20px;
+  color: #1e1722;
+}
+
+.login-form{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.login-form form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.login-form h5{
+  margin: 0;
+  padding-top: 10px;
+  color: #1e1722;
+}
+
+.login-form input{
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 20px;
+  border: 1px solid #BA94D1;
+}
+
+.login-form button{
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 45px;
+  margin-right: 45px;
+  border: 1px solid #BA94D1;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.login-form button:hover{
+  background-color: #FBFACD;
+  border: 1px solid;
+  color: #BA94D1;
+}
+
+.edit-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.edit-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #DEBACE;
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid #BA94D1;
+}
+
+.edit-card form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.data{
   display: flex;
   flex-direction: row;
   gap: 20px;
-  align-items: center;
-  justify-items: center;
 }
 
-.link{
+.data h4{
+  margin: 0;
+  padding-left: 15px;
+  padding-bottom: 2px;
+  font-weight: 500;
+}
+
+.personal{
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-.link a{
-  padding: 20px;
-  background-color: purple;
-  color: white;
+.tambahan{
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-card input{
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 20px;
+  border: 1px solid #BA94D1;
+  margin-bottom: 15px;
+}
+
+form button{
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 110px;
+  margin-right: 110px;
+  border: 1px solid #BA94D1;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+form button:hover{
+  background-color: #FBFACD;
+  border: 1px solid;
+  color: #BA94D1;
 }

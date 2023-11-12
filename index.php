@@ -20,25 +20,27 @@ $data = mysqli_fetch_array($final);
     <header>
         <a href="admin.php">Login</a>
     </header>
-    <h1>Curriculum Vitae</h1>
     <div class="container">
         <div class="profile">
             <img src="<?php echo $data['foto_path'] ?>" alt="">
             <h1><?php echo $data['nama'] ?></h1>
-            <div class="ttl">
-                <h4><?php echo $data['email'] ?></h4>
-                <h4> | </h4>
-                <h4><?php echo $data['telepon'] ?></h4>
-            </div>
-            <div class="detail">
-                <h1>Website</h1>
-                <a href="<?php echo $data["web"] ?>">Portofolio</a>
-                <h1>Pendidikan</h1>
-                <h4><?php echo $data['pendidikan'] ?></h4>
-                <h1>Pengalaman Kerja</h1>
-                <h4><?php echo $data['pengalaman_kerja'] ?></h4>
-                <h1>Keterampilan</h1>
-                <h4><?php echo $data['keterampilan'] ?></h4>
+            <h4><?php echo $data['alamat'] ?></h4>
+            <a href="<?php echo $data["web"] ?>" target="_blank"><?php echo $data["web"] ?></a>
+            <div class="card-detail">
+                <div class="detail">
+                    <h1>Pendidikan</h1>
+                    <h4><?php echo $data['pendidikan'] ?></h4>
+                    <h1>Pengalaman Kerja</h1>
+                    <h4><?php echo $data['pengalaman_kerja'] ?></h4>
+                    <h1>Keterampilan</h1>
+                    <h4><?php echo $data['keterampilan'] ?></h4>
+                </div>
+                <div class="contact">
+                    <h1>Email</h1>
+                    <h4><?php echo $data['email'] ?></h4>
+                    <h1>No. Telp</h1>
+                    <h4><?php echo $data['telepon'] ?></h4>
+                </div>
             </div>
         </div>
     </div>

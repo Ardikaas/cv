@@ -34,7 +34,6 @@ if(isset($_POST['submit'])){
       </script>";
   }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -46,11 +45,19 @@ if(isset($_POST['submit'])){
   <title>Curriculum Vitae | Login</title>
 </head>
 <body>
-  <h2>Login</h2>
-  <form class="" action="" method="post" autocomplete="off">
-    <input type="text" name="email" id="email" required value="">
-    <input type="password" name="password" id="password" required value="">
-    <button type="submit" name="submit">Login</button>
-  </form>
+  <div class="login-con">
+    <div class="login-card">
+      <h2>Login</h2>
+      <div class="login-form">
+        <form action="" method="post" autocomplete="off">
+          <h5>Username or Email</h5>
+          <input type="text" name="email" id="email" required value="">
+          <h5>Password</h5>
+          <input type="password" name="password" id="password" required value="">
+          <button type="submit" name="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
