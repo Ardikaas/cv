@@ -2,7 +2,8 @@
 
 include_once('config.php');
 
-$final = mysqli_query($conn, "SELECT * FROM cv_data ORDER BY nama ASC")
+$final = mysqli_query($conn, "SELECT * FROM cv_data ORDER BY nama ASC");
+$data = mysqli_fetch_array($final);
 ?>
 
 <!DOCTYPE html>
@@ -10,19 +11,34 @@ $final = mysqli_query($conn, "SELECT * FROM cv_data ORDER BY nama ASC")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <title>PHP | connect</title>
+    <link href="style.css" rel="stylesheet">
+    <title>Curicullum Vitae</title>
 </head>
 <body>
-    <h2>Curicullum Vitae</h2>
-    <div>
-    <?php
-        while ($data = mysqli_fetch_array($final)) {
-            echo "<img src='$data[foto_path]'/>";
-            echo "<h1>".$data['nama']."</h1>";
-        }
-    ?>
+    <header>
+        <a href="/edit.php">Edit</a>
+    </header>
+    <h1>Curicullum Vitae</h1>
+    <div class="container">
+        <div class="profile">
+            <img src="<?php echo $data['foto_path'] ?>" alt="">
+            <h1><?php echo $data['nama'] ?></h1>
+            <div class="ttl">
+                <h4><?php echo $data['email'] ?></h4>
+                <h4> | </h4>
+                <h4><?php echo $data['telepon'] ?></h4>
+            </div>
+            <div class="detail">
+                <h1>Website</h1>
+                <a href="<?php echo $data["web"] ?>">Portofolio</a>
+                <h1>Pendidikan</h1>
+                <h4><?php echo $data['pendidikan'] ?></h4>
+                <h1>Pengalaman Kerja</h1>
+                <h4><?php echo $data['pengalaman_kerja'] ?></h4>
+                <h1>Keterampilan</h1>
+                <h4><?php echo $data['keterampilan'] ?></h4>
+            </div>
+        </div>
     </div>
 </body>
 </html>
