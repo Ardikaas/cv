@@ -12,13 +12,13 @@ $data = mysqli_fetch_array($final);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <title>Curicullum Vitae</title>
+    <title>Curriculum Vitae | Home</title>
 </head>
 <body>
     <header>
-        <a href="/edit.php">Edit</a>
+        <a href="admin.php">Login</a>
     </header>
-    <h1>Curicullum Vitae</h1>
+    <h1>Curriculum Vitae</h1>
     <div class="container">
         <div class="profile">
             <img src="<?php echo $data['foto_path'] ?>" alt="">
