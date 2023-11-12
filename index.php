@@ -1,5 +1,7 @@
 <?php
-
+session_start();
+session_unset();
+session_destroy();
 include_once('config.php');
 
 $final = mysqli_query($conn, "SELECT * FROM cv_data ORDER BY nama ASC");
