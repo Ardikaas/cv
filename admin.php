@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('config.php');
 
 if(!empty($_SESSION["id"])){
@@ -13,13 +14,24 @@ if(isset($_POST['submit'])){
   if(mysqli_num_rows($final) > 0){
     if($password == $data["pass"]){
       $_SESSION["login"] = true;
-      $_SESSION["id"] = $data["id"];
       header("Location: edit.php");
     }else{
-      echo "<script> alert('email atau kata sandi yang anda masukkan salah'); </script>";
+      echo "
+      <script>
+      alert('email atau kata sandi yang anda masukkan salah');
+      setTimeout(function() {
+      }, 10000);
+      window.location.href = 'index.php';
+      </script>";
     }
   }else{
-    echo "<script> alert('email atau kata sandi yang anda masukkan salah'); </script>";
+    echo "
+      <script>
+      alert('email atau kata sandi yang anda masukkan salah');
+      setTimeout(function() {
+      }, 10000);
+      window.location.href = 'index.php';
+      </script>";
   }
 }
 
